@@ -1,0 +1,32 @@
+{
+  "name": "BookmoreStays - Luxury Villas & Vacation Rentals",
+  "short_name": "BookmoreStays",
+  "description": "Discover and book handpicked luxury villas, private pools, and vacation rentals in India.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "categories": ["travel", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Explore Villas",
+      "short_name": "Search",
+      "description": "Find luxury stays near you",
+      "url": "/search"
+    },
+    {
+      "name": "My Stays",
+      "short_name": "Bookings",
+      "description": "View saved properties and inquiries",
+      "url": "/my-stays"
+    }
+  ]
+}

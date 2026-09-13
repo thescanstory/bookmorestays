@@ -1,27 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #03060a;
+  --foreground: #F8FAFC;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #03060a;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@keyframes fogDrift {
+  0% { transform: translateX(-10%) translateY(0); opacity: 0.15; }
+  50% { transform: translateX(10%) translateY(-5%); opacity: 0.35; }
+  100% { transform: translateX(-10%) translateY(0); opacity: 0.15; }
+}
+
+@keyframes eerieTorch {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 15px rgba(217, 119, 6, 0.4)); }
+  33% { opacity: 1; filter: drop-shadow(0 0 25px rgba(220, 38, 38, 0.6)); }
+  66% { opacity: 0.75; filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.5)); }
+}
+
+@keyframes bloodPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(153, 27, 27, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.7); }
+}
+
+.animate-fog {
+  animation: fogDrift 18s ease-in-out infinite;
+}
+
+.animate-torch {
+  animation: eerieTorch 4s ease-in-out infinite;
+}
+
+.animate-blood-pulse {
+  animation: bloodPulse 3s ease-in-out infinite;
+}
+
+@supports (padding: max(0px)) {
+  .pb-safe {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+  .pt-safe {
+    padding-top: max(16px, env(safe-area-inset-top));
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
