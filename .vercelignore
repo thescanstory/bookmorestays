@@ -1,0 +1,18 @@
+# dependencies
+node_modules
+
+# build outputs & caches
+.next
+out
+build
+coverage
+
+# native android
+android
+
+# media & scratch archives
+*.zip
+1.png
+test_*.js
+.claude
+.DS_Store

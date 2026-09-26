@@ -17,9 +17,23 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Bookmorestays - Luxury Stays & Direct Bookings",
-  description: "Discover curated luxury stays, 4K verified cinematic video tours, and direct booking rates vs MakeMyTrip.",
+  metadataBase: new URL('https://bookmorestays.com'),
+  title: "Bookmore Stays — Extraordinary Villas, Coffee Estates & Experiential Getaways",
+  description: "Curated luxury villas, heritage coffee estates, mountain retreats, and iconic experiences with 100% BMS StayCover guarantee and 24/7 concierge support.",
   manifest: "/manifest.json",
+  openGraph: {
+    title: "Bookmore Stays — Extraordinary Villas, Coffee Estates & Experiential Getaways",
+    description: "Curated weekend escapes departing from Bangalore, Mumbai, Delhi, Hyderabad & Chennai. Coorg Estates, Bali Villas, Kashmir Stays & The Traitors Escape.",
+    url: "https://bookmorestays.com",
+    siteName: "Bookmore Stays",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bookmore Stays — Extraordinary Villas, Coffee Estates & Experiential Getaways",
+    description: "Extraordinary luxury villas, coffee estates & unique theme escapes.",
+  },
 };
 
 export const viewport: Viewport = {
@@ -38,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-[#222222]`}
       >
         <AuthProvider>
           <ClientShell>

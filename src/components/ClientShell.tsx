@@ -19,8 +19,10 @@ export default function ClientShell({ children }: { children: React.ReactNode })
     );
   }
 
+  const isHome = pathname === '/';
+
   return (
-    <div className="min-h-screen w-full bg-black text-white selection:bg-red-900 selection:text-white relative font-sans overflow-x-hidden">
+    <div className={`min-h-screen w-full ${isHome ? 'bg-white text-[#222222]' : 'bg-[#050608] text-white'} selection:bg-[#FF385C] selection:text-white relative font-sans overflow-x-hidden`}>
       <Toaster position="top-center" toastOptions={{ className: 'font-semibold text-sm rounded-xl' }} />
       <ShareIntentListener />
       {children}
