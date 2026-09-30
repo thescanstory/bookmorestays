@@ -1136,84 +1136,47 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    padding: 50px 0 90px !important;
+    padding: 36px 0 60px !important;
     gap: 0 !important;
   }
   body[data-layout-closing="b"] .fin h2 {
-    font-size: clamp(28px, 7.6vw, 42px) !important;
+    font-size: clamp(22px, 6.2vw, 30px) !important;
     line-height: 1.18 !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 10px !important;
     writing-mode: horizontal-tb !important;
   }
   body[data-layout-closing="b"] .fin p {
-    font-size: 14px !important;
-    line-height: 1.6 !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
     color: var(--bone-dim) !important;
     max-width: 100% !important;
-    margin: 0 auto 24px !important;
+    margin: 0 auto 18px !important;
   }
   body[data-layout-closing="b"] .fin .cta {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 10px !important;
+    gap: 8px !important;
     width: 100% !important;
-    max-width: 340px !important;
-    padding: 16px 24px !important;
+    max-width: 290px !important;
+    padding: 13px 20px !important;
     background: var(--vermilion) !important;
     color: #fff !important;
     border-radius: 999px !important;
-    font-size: 14.5px !important;
+    font-size: 13.5px !important;
     font-weight: 600 !important;
-    box-shadow: 0 10px 30px rgba(224, 35, 28, 0.4) !important;
+    box-shadow: 0 8px 24px rgba(224, 35, 28, 0.4) !important;
     text-transform: uppercase !important;
     letter-spacing: .12em !important;
   }
 
   /* Footer */
-  body[data-layout-footer="b"] .foot-grid { grid-template-columns: 1fr; gap: 24px; }
-  body[data-layout-footer="b"] .foot-brand { grid-column: auto; grid-template-columns: 1fr; row-gap: 12px; }
-  body[data-layout-footer="b"] .foot-brand p { font-size: 16px; }
+  body[data-layout-footer="b"] .foot-grid { grid-template-columns: 1fr; gap: 20px; }
+  body[data-layout-footer="b"] .foot-brand { grid-column: auto; grid-template-columns: 1fr; row-gap: 10px; }
+  body[data-layout-footer="b"] .foot-brand p { font-size: 14px; }
   body[data-layout-footer="b"] .foot-grid > div:nth-child(n+3) { padding-left: 0; border-left: 0; }
-  body[data-layout-footer="b"] .foot-base { flex-direction: column; gap: 8px; text-align: center; }
+  body[data-layout-footer="b"] .foot-base { flex-direction: column; gap: 6px; text-align: center; font-size: 11px; }
   body[data-layout-footer="b"] .foot-base span:last-child { text-align: center; }
-
-  /* Sticky Mobile WhatsApp Floating Action Bar */
-  .mobile-sticky-bar {
-    position: fixed;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    z-index: 95;
-    display: flex;
-    justify-content: center;
-    pointer-events: auto;
-  }
-  .mobile-sticky-bar a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    max-width: 380px;
-    height: 52px;
-    background: #25D366;
-    color: #05070a;
-    font-size: 14.5px;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    border-radius: 999px;
-    box-shadow: 0 12px 36px rgba(37, 211, 102, 0.35);
-    transition: transform .2s ease;
-  }
-  .mobile-sticky-bar a:active {
-    transform: scale(0.97);
-  }
-}
-
-@media (min-width: 821px) {
-  .mobile-sticky-bar { display: none !important; }
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -1516,13 +1479,6 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     <span>Bengaluru · Madikeri · Western Ghats</span>
   </div>
 </footer>
-
-<div class="mobile-sticky-bar">
-  <a href="https://wa.me/919738397933?text=Hi%20Book%20More%20Stays!%20I%20want%20to%20reserve%20a%20spot%20for%20The%20Traitors%20of%20Coorg%20mystery%20weekend." target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.963.54 1.791.815 2.796.815 3.183 0 5.768-2.586 5.769-5.766.001-3.182-2.585-5.768-5.769-5.768zm3.376 8.212c-.141.396-.717.755-1.018.804-.287.046-.66.068-1.066-.062-.258-.083-.591-.219-.99-.393-1.697-.738-2.793-2.483-2.879-2.597-.084-.114-.693-.923-.693-1.761s.437-1.25.592-1.423c.155-.173.339-.216.452-.216.113 0 .226.001.325.006.104.005.244-.04.38.29.141.339.48 1.172.523 1.257.042.085.07.184.014.296-.056.113-.085.184-.17.283-.085.099-.178.22-.254.296-.085.085-.173.177-.074.347.099.17.439.724.942 1.172.647.577 1.192.756 1.362.841.17.085.269.071.368-.042.099-.113.424-.494.537-.664.113-.17.226-.141.381-.085.155.056.989.466 1.159.551.17.085.283.127.325.198.042.071.042.41-.099.806z"/></svg>
-    Reserve Retreat Spot
-  </a>
-</div>
 
 </div><!-- /.page -->
 
