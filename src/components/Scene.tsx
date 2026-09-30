@@ -5,7 +5,7 @@ import "@designcodeio/threeui/style.css";
 
 export function Scene() {
   return (
-    <div className="shader-frame">
+    <div className="shader-frame" style={{ width: "100%", height: "100%", minHeight: "100vh", position: "relative" }}>
       <KageLandingPage
         headingFont="onest"
         bodyFont="onest"
@@ -15,6 +15,7 @@ export function Scene() {
         headingSize={46}
         bodySize={17}
         headingLetterSpacing={-0.012}
+        style={{ width: "100%", height: "100%", minHeight: "100vh", position: "relative" }}
       />
     </div>
   );
