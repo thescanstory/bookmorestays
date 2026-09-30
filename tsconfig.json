@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
+    "downlevelIteration": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,7 +20,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@designcodeio/threeui": ["./src/shaders/index.ts"],
+      "@designcodeio/threeui/*": ["./src/shaders/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
