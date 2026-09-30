@@ -7,7 +7,7 @@ import { Home, Compass, Bookmark, User } from 'lucide-react';
 export default function BottomNav() {
   const pathname = usePathname();
 
-  if (pathname === '/welcome' || pathname === '/' || pathname === '/traitors') return null;
+  if (pathname === '/welcome' || pathname === '/' || pathname === '/traitors' || pathname === '/traitors-3d') return null;
 
   const navItems = [
     { icon: Home, href: '/', label: 'Feed' },
